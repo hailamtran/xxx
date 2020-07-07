@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mystyle.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+
+        body {background-color: powderblue};
+        h1   {color: blue;}
+
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .city {
+            display: inline-block;
+            background-color: tomato;
+            color: white;
+            border: 0px solid black;
+            margin: 5px;
+            padding: 100px;
+        }
+
+        .hanoi{
+            background-color: palegoldenrod;
+        }
+        #myHeader {
+            background-color: antiquewhite;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .left {
+            background-color:#2196F3;
+            padding:60px;
+            float:left;
+            width:20%; /* The width is 20%, by default */
+        }
+
+        .main {
+            background-color:#f1f1f1;
+            padding:60px;
+            float:left;
+            width:60%; /* The width is 60%, by default */
+        }
+
+        .right {
+            background-color:#4CAF50;
+            padding:60px;
+            float:left;
+            width:20%; /* The width is 20%, by default */
+        }
+
+
+        @media screen and (max-width:800px) {
+            .left, .main, .right {
+                width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My First Heading</h1>
+    <p >  My first paragraph.</p>
+    <p style="font-size:160%;" style="color:blue;">Another paragraph.</p>
+    <p style="color:MediumSeaGreen;">This is<br> a red <br> paragraph <br> bro.</p>
+    <a href="https://www.w3schools.com">https://www.w3schools.com</a>
+    <hr>
+    <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+    <hr>
+    <button onclick="document.location='https://www.w3schools.com/html/'">HTML Tutorial</button>
+
+
+    <h1 id="myHeader">Hello World!</h1>
+    <button onclick="displayResult()">Change text</button>
+
+    <br />
+    <script>
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Have a nice day!";
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "yellow";
+        }
+
+        function displayResult1() {
+            document.getElementById("myHeader").innerHTML = "Hello World";
+            document.getElementById("demo").style.color = "blue";
+            document.getElementById("demo").style.backgroundColor = "blue";
+        }
+    </script>
+
+
+    <div onclick="displayResult()" class="hanoi city">
+        <h2>London</h2>
+        <p  >London is the capital of England.</p>
+    </div>
+
+    <div onclick="displayResult1()" class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <hr/>
+    <br/>
+
+    <img src="imgs/a.jpg" width="104" height="142">
+    <br/>
+
+    <hr>
+
+    <h1 style="text-align:center;">My First Heading</h1>
+    <p>My first paragraph.</p>
+    <hr>
+
+    <div class="left">
+        <p>Left Menu</p>
+    </div>
+
+    <div class="main">
+        <p>Main Content</p>
+    </div>
+
+    <div class="right">
+        <p>Right Content</p>
+    </div>
+
+    </br>
+    </br>
+
+    <div class="w3-container w3-green">
+        <h1>W3Schools Demo</h1>
+        <p>Resize this responsive page!</p>
+    </div>
+    </br>
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <h2>London</h2>
+            <p>London is the capital city of England.</p>
+            <p>It is the most populous city in the United Kingdom,
+                with a metropolitan area of over 13 million inhabitants.</p>
+        </div>
+
+        <div class="w3-third">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.</p>
+            <p>The Paris area is one of the largest population centers in Europe,
+                with more than 12 million inhabitants.</p>
+        </div>
+
+        <div class="w3-third">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+            <p>It is the center of the Greater Tokyo Area,
+                and the most populous metropolitan area in the world.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
