@@ -11,9 +11,14 @@
 
         body {
             background-image: url("imgs/a.jpg");
+            font-size: 30px;
 
         }
 
+        p {
+            background-color: lavender ;
+            font-style: italic;
+        }
         .topnav {
             overflow: hidden;
             background-color: pink;
@@ -45,6 +50,7 @@
             padding: 30px;
             text-align: center;
             font-size: 50px;
+          
         }
 
         /* Create three unequal columns that floats next to each other */
@@ -100,9 +106,9 @@
 </div>
 
 <div class="topnav">
-    <a href="#" onclick="displayResult1()">Love Memory</a>
-    <a href="#" onclick="displayResult1()">First Date</a>
-    <a href="#" onclick="displayResult2()">First Love</a>
+    <a href="#" onclick="displayResult()">tây ban nha</a>
+    <a href="#" onclick="displayResult1()">đức</a>
+    <a href="#" onclick="displayResult2()">ý</a>
     <a href="#">First Grab</a>
     <a href="#">First of everything</a>
 </div>
@@ -110,29 +116,61 @@
 <div id="img-container"></div>
 
 <script>
-    const imgs = ['imgs/b.jpg', 'imgs/w3schools.jpg'];
+
+    const imgs = ['imgs/s1.png','imgs/s2.jpeg','imgs/s3.jpeg',
+    'imgs/d1.png', 'imgs/d2.jpg', 'imgs/d3.jpeg',
+    'imgs/i1.jpeg', 'imgs/i2.jpeg', 'imgs/i3.jpeg',
+    ];
     for (let i = 0; i < imgs.length; i++) {
         const container = document.getElementById('img-container');
-        container.innerHTML += `<img id="img${i}" style="display: none" src="${imgs[i]}" width="320" height="290">`
+        container.innerHTML += `<img id="img${i}" style="display: none; margin-left: 5px" src="${imgs[i]}" width="320" height="290">`
+    }
+
+    function displayResult() {
+        for (let i = 0; i <imgs.length; i++) {
+            if(i<=2) {
+                document.getElementById('img' + i.toString()).style.display = 'inline-block';
+            }
+
+            else {
+                document.getElementById('img' + i.toString()).style.display = 'none';
+            }
+        }
+
+        document.getElementById("demo").innerHTML = "This is spain";
     }
 
     function displayResult1() {
-        for (let i = 0; i < imgs.length; i++) {
-            const container = document.getElementById('img-container');
-            container.innerHTML += `<img id="img${i}" style="display: none" src="${imgs[i]}" width="320" height="290">`
-        }
+        for (let i = 0; i <imgs.length; i++) {
+            if(i>2 && i<6) {
+                document.getElementById('img' + i.toString()).style.display = 'inline-block';
+            }
 
-        document.getElementById('img0').style.display = 'none';
-        document.getElementById('img1').style.display = 'block';
+            else {
+                document.getElementById('img' + i.toString()).style.display = 'none';
+            }
+        }
+        document.getElementById("demo").innerHTML = "This is germany" + "<br>"
+            + "and i love it" + "<br>" +
+            "abc";
     }
 
     function displayResult2() {
-        document.getElementById('img0').style.display = 'block';
-        document.getElementById('img1').style.display = 'none';
+        for (let i = 0; i <imgs.length; i++) {
+            if(i>=6) {
+                document.getElementById('img' + i.toString()).style.display = 'inline-block';
+            }
+
+            else {
+                document.getElementById('img' + i.toString()).style.display = 'none';
+            }
+        }
+        document.getElementById("demo").innerHTML = "This is italy" ;
     }
 
 </script>
 
+<p id="demo"></p>
 <hr/>
 <!--
 <img src="imgs/f.jpg" width="320" height="290">
